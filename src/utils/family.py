@@ -59,13 +59,13 @@ family_to_name: dict[int, Optional[dict[str, List[str]]]] = {
         "Ranunculaceae": ["Buttercup", "Windflower"],
         "Violaceae": ["Pansy"],
     },
-    102: None
+    102: [None]
 
 }
 
 
 def make_labels(names: Optional[List[str]] = None) -> dict[int, str]:
-    if names is None:
+    if None in names:
         return
     output: dict[int, str] = {}
     for i, name in enumerate(names):
